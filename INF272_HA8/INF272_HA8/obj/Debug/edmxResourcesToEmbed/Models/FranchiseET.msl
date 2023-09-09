@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="MyShopModelStoreContainer" CdmEntityContainer="MyShopEntities">
+    <EntitySetMapping Name="Franchises">
+      <EntityTypeMapping TypeName="MyShopModel.Franchise">
+        <MappingFragment StoreEntitySet="Franchise">
+          <ScalarProperty Name="FranchiseID" ColumnName="FranchiseID" />
+          <ScalarProperty Name="FranchiseArea" ColumnName="FranchiseArea" />
+          <ScalarProperty Name="FranchiseName" ColumnName="FranchiseName" />
+          <ScalarProperty Name="FranchiseOwner" ColumnName="FranchiseOwner" />
+          <ScalarProperty Name="FranchiseNumberClients" ColumnName="FranchiseNumberClients" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

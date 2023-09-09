@@ -1,0 +1,53 @@
+﻿@model IEnumerable<INF272_HA8.Models.Franchise>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h1 class="text-center"> Maphosa Sokombovu Inc.</h1>
+<h4 class="text-center"> Section 1 </h4>
+<div class="row">
+        <a class="btn btn-default col-lg-offset-1" href="@Url.Action("Create","Data")">Add New Franchise</a>
+        <a class="btn btn-default col-lg-offset-7" href="@Url.Action("Main","Data")">Go To Section 2</a>
+</div>
+<br />
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.FranchiseArea)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.FranchiseName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.FranchiseOwner)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.FranchiseNumberClients)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.FranchiseArea)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.FranchiseName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.FranchiseOwner)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.FranchiseNumberClients)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.FranchiseID  }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.FranchiseID })
+        </td>
+    </tr>
+}
+
+</table>
